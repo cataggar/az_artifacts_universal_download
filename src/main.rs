@@ -21,13 +21,13 @@ struct AzArtifactsUniversalDownloadCommand {
     #[arg(long, short, verbatim_doc_comment)]
     name: String,
 
-    /// Directory to place the package contents.
-    #[arg(long, verbatim_doc_comment)]
-    path: PathBuf,
-
     /// Version of the package, e.g. 1.0.0.
     #[arg(long, short, verbatim_doc_comment)]
     version: String,
+
+    /// Directory to place the package contents.
+    #[arg(long, verbatim_doc_comment)]
+    path: PathBuf,
 }
 
 fn main() {
