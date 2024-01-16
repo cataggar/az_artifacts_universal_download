@@ -11,7 +11,7 @@ struct AzArtifactsUniversalDownloadCommand {
 
     /// Name or ID of the project.
     #[arg(long, short)]
-    project: String,
+    project: Option<String>,
 
     /// Name or ID of the feed.
     #[arg(long, verbatim_doc_comment)]
@@ -28,16 +28,6 @@ struct AzArtifactsUniversalDownloadCommand {
     /// Version of the package, e.g. 1.0.0.
     #[arg(long, short, verbatim_doc_comment)]
     version: String,
-
-    // Wildcard filter for file download.
-    // #[arg(long)]
-    // file_filter: Option<String>,
-    //
-    /// Scope of the feed: 'project' if the feed was created in a project, and 'organization' otherwise.
-    /// Allowed values: organization, project.
-    /// Default: organization.
-    #[arg(long, verbatim_doc_comment)]
-    scope: Option<String>,
 }
 
 fn main() {
