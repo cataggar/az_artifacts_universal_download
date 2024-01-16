@@ -1,0 +1,10 @@
+[package]
+name = "az_artifacts_universal_download"
+version = "0.1.0"
+edition = "2021"
+# proof of concept currently
+publish = false
+
+[dependencies]
+azure_devops_rust_api = "0.15.2"
+clap = { version = "4.4.17", features = ["derive"] }
